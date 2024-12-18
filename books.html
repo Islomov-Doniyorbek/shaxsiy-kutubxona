@@ -107,60 +107,41 @@
   </header>
 
   <!-- Book List Section -->
-  <section class="book-list">
-    <div class="book-card">
-      <img src="https://via.placeholder.com/250x300?text=Kitob+1" alt="Kitob 1">
-      <h3>Kitob Nomi 1</h3>
-      <p>Muallif: Jon Doe</p>
-      <p>Bu kitobning qisqacha tavsifi. Unda ajoyib voqealar va o'zgarishlar haqida gapiriladi.</p>
-      <a href="#" class="btn">Qo'shish</a>
-    </div>
-
-    <div class="book-card">
-      <img src="https://via.placeholder.com/250x300?text=Kitob+2" alt="Kitob 2">
-      <h3>Kitob Nomi 2</h3>
-      <p>Muallif: Jane Doe</p>
-      <p>Ushbu kitob sizni yangi olamlar bilan tanishtiradi, qiziqarli hikoya va qiziqarli mavzular.</p>
-      <a href="#" class="btn">Qo'shish</a>
-    </div>
-
-    <div class="book-card">
-      <img src="https://via.placeholder.com/250x300?text=Kitob+3" alt="Kitob 3">
-      <h3>Kitob Nomi 3</h3>
-      <p>Muallif: Ali Akbar</p>
-      <p>Kitobda insoniyatning rivojlanishi va hayotiy darslar haqida yozilgan.</p>
-      <a href="#" class="btn">Qo'shish</a>
-    </div>
-
-    <div class="book-card">
-      <img src="https://via.placeholder.com/250x300?text=Kitob+4" alt="Kitob 4">
-      <h3>Kitob Nomi 4</h3>
-      <p>Muallif: Sarah Ali</p>
-      <p>Hayot va o'lim, sevgi va kurash haqida ta'sirli hikoya.</p>
-      <a href="#" class="btn">Qo'shish</a>
-    </div>
-
-    <div class="book-card">
-      <img src="https://via.placeholder.com/250x300?text=Kitob+5" alt="Kitob 5">
-      <h3>Kitob Nomi 5</h3>
-      <p>Muallif: Ismail Raxmonov</p>
-      <p>O'zgarishlar va yangi imkoniyatlarni izlash haqida hikoya qiluvchi kitob.</p>
-      <a href="#" class="btn">Qo'shish</a>
-    </div>
-
-    <div class="book-card">
-      <img src="https://via.placeholder.com/250x300?text=Kitob+6" alt="Kitob 6">
-      <h3>Kitob Nomi 6</h3>
-      <p>Muallif: Zara Lee</p>
-      <p>Qiziqarli syujet va kutilmagan yakunlar bilan to'la kitob.</p>
-      <a href="#" class="btn">Qo'shish</a>
-    </div>
+  <section class="book-list" id="book-list">
+    <!-- Kitoblar dinamik tarzda shu yerga joylashtiriladi -->
   </section>
 
   <!-- Footer Section -->
   <footer>
     <p>&copy; 2024 Shaxsiy Kutubxona Tizimi. Barcha huquqlar himoyalangan.</p>
   </footer>
+
+  <script>
+    // localStorage'dan kitoblarni olish va ko'rsatish
+    window.onload = function() {
+      let books = JSON.parse(localStorage.getItem('books')) || [];
+
+      const bookList = document.getElementById('book-list');
+      bookList.innerHTML = ''; // Oldingi kitoblarni tozalash
+
+      books.forEach(function(book) {
+        // Kitob kartasini yaratish
+        const bookCard = document.createElement('div');
+        bookCard.classList.add('book-card');
+
+        bookCard.innerHTML = `
+          <img src="${book.image}" alt="${book.title}">
+          <h3>${book.title}</h3>
+          <p><strong>Muallif:</strong> ${book.author}</p>
+          <p><strong>Tavsif:</strong> ${book.description}</p>
+          <p><strong>Narx:</strong> $${book.price}</p>
+          <a href="#" class="btn">Kitobni O'qish</a>
+        `;
+
+        bookList.appendChild(bookCard);
+      });
+    };
+  </script>
 
 </body>
 </html>

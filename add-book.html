@@ -108,7 +108,7 @@
   <!-- Form Section -->
   <section class="form-container">
     <h2>Yangi Kitob Qo'shish</h2>
-    <form action="#" method="POST">
+    <form id="book-form">
       <label for="book-title">Kitob Nomi:</label>
       <input type="text" id="book-title" name="book-title" required>
 
@@ -132,6 +132,42 @@
   <footer>
     <p>&copy; 2024 Shaxsiy Kutubxona Tizimi. Barcha huquqlar himoyalangan.</p>
   </footer>
+
+  <script>
+    // Kitob qo'shish va localStorage'ga saqlash
+    document.getElementById('book-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const bookTitle = document.getElementById('book-title').value;
+      const author = document.getElementById('author').value;
+      const description = document.getElementById('description').value;
+      const bookImage = document.getElementById('book-image').value;
+      const price = document.getElementById('price').value;
+
+      // Yangi kitob ob'ektini yaratish
+      const newBook = {
+        title: bookTitle,
+        author: author,
+        description: description,
+        image: bookImage,
+        price: price
+      };
+
+      // localStorage'da kitoblar ro'yxatini olish
+      let books = JSON.parse(localStorage.getItem('books')) || [];
+
+      // Yangi kitobni qo'shish
+      books.push(newBook);
+
+      // Yangilangan kitoblar ro'yxatini localStorage'ga saqlash
+      localStorage.setItem('books', JSON.stringify(books));
+
+      // Formani tozalash
+      document.getElementById('book-form').reset();
+
+      alert('Kitob qo\'shildi!');
+    });
+  </script>
 
 </body>
 </html>
