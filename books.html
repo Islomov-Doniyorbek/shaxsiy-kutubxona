@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kitoblar Ro'yxati</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f4f4f4;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      text-transform: uppercase;
+    }
+
+    /* Book List Section */
+    .book-list {
+      padding: 50px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .book-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      width: 280px;
+      margin: 20px;
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .book-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .book-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .book-card h3 {
+      font-size: 1.5rem;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    .book-card p {
+      font-size: 1.1rem;
+      color: #7f8c8d;
+      margin-bottom: 20px;
+    }
+
+    .book-card .btn {
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .book-card .btn:hover {
+      background-color: #2980b9;
+    }
+
+    /* Footer */
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Kitoblar Ro'yxati</h1>
+  </header>
+
+  <!-- Book List Section -->
+  <section class="book-list">
+    <div class="book-card">
+      <img src="https://via.placeholder.com/250x300?text=Kitob+1" alt="Kitob 1">
+      <h3>Kitob Nomi 1</h3>
+      <p>Muallif: Jon Doe</p>
+      <p>Bu kitobning qisqacha tavsifi. Unda ajoyib voqealar va o'zgarishlar haqida gapiriladi.</p>
+      <a href="#" class="btn">Qo'shish</a>
+    </div>
+
+    <div class="book-card">
+      <img src="https://via.placeholder.com/250x300?text=Kitob+2" alt="Kitob 2">
+      <h3>Kitob Nomi 2</h3>
+      <p>Muallif: Jane Doe</p>
+      <p>Ushbu kitob sizni yangi olamlar bilan tanishtiradi, qiziqarli hikoya va qiziqarli mavzular.</p>
+      <a href="#" class="btn">Qo'shish</a>
+    </div>
+
+    <div class="book-card">
+      <img src="https://via.placeholder.com/250x300?text=Kitob+3" alt="Kitob 3">
+      <h3>Kitob Nomi 3</h3>
+      <p>Muallif: Ali Akbar</p>
+      <p>Kitobda insoniyatning rivojlanishi va hayotiy darslar haqida yozilgan.</p>
+      <a href="#" class="btn">Qo'shish</a>
+    </div>
+
+    <div class="book-card">
+      <img src="https://via.placeholder.com/250x300?text=Kitob+4" alt="Kitob 4">
+      <h3>Kitob Nomi 4</h3>
+      <p>Muallif: Sarah Ali</p>
+      <p>Hayot va o'lim, sevgi va kurash haqida ta'sirli hikoya.</p>
+      <a href="#" class="btn">Qo'shish</a>
+    </div>
+
+    <div class="book-card">
+      <img src="https://via.placeholder.com/250x300?text=Kitob+5" alt="Kitob 5">
+      <h3>Kitob Nomi 5</h3>
+      <p>Muallif: Ismail Raxmonov</p>
+      <p>O'zgarishlar va yangi imkoniyatlarni izlash haqida hikoya qiluvchi kitob.</p>
+      <a href="#" class="btn">Qo'shish</a>
+    </div>
+
+    <div class="book-card">
+      <img src="https://via.placeholder.com/250x300?text=Kitob+6" alt="Kitob 6">
+      <h3>Kitob Nomi 6</h3>
+      <p>Muallif: Zara Lee</p>
+      <p>Qiziqarli syujet va kutilmagan yakunlar bilan to'la kitob.</p>
+      <a href="#" class="btn">Qo'shish</a>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 Shaxsiy Kutubxona Tizimi. Barcha huquqlar himoyalangan.</p>
+  </footer>
+
+</body>
+</html>

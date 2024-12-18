@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kitob Qo'shish</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f4f4f4;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      text-transform: uppercase;
+    }
+
+    /* Form Section */
+    .form-container {
+      width: 80%;
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #2c3e50;
+    }
+
+    .form-container label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .form-container input,
+    .form-container textarea,
+    .form-container select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+
+    .form-container textarea {
+      height: 120px;
+    }
+
+    .form-container input[type="submit"] {
+      background-color: #3498db;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-container input[type="submit"]:hover {
+      background-color: #2980b9;
+    }
+
+    /* Footer */
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Kitob Qo'shish</h1>
+  </header>
+
+  <!-- Form Section -->
+  <section class="form-container">
+    <h2>Yangi Kitob Qo'shish</h2>
+    <form action="#" method="POST">
+      <label for="book-title">Kitob Nomi:</label>
+      <input type="text" id="book-title" name="book-title" required>
+
+      <label for="author">Muallif:</label>
+      <input type="text" id="author" name="author" required>
+
+      <label for="description">Kitob Tavsifi:</label>
+      <textarea id="description" name="description" required></textarea>
+
+      <label for="book-image">Kitob Rasmi (URL):</label>
+      <input type="url" id="book-image" name="book-image" placeholder="Rasm URL" required>
+
+      <label for="price">Narx ($):</label>
+      <input type="number" id="price" name="price" required>
+
+      <input type="submit" value="Qo'shish">
+    </form>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 Shaxsiy Kutubxona Tizimi. Barcha huquqlar himoyalangan.</p>
+  </footer>
+
+</body>
+</html>

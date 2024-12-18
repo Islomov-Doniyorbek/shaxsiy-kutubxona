@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shaxsiy Kutubxona Tizimi</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background: #f9f9f9;
+      overflow-x: hidden;
+    }
+
+    /* Header & Navigation */
+    header {
+      background: #2c3e50;
+      color: cornsilk;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+    }
+
+    header nav ul li {
+      margin: 0 20px;
+    }
+
+    header nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      text-transform: uppercase;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    header nav ul li a:hover {
+      color: #3498db;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-image: url('https://via.placeholder.com/1500x800?text=Library+Background');
+      background-position: center;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      animation: fadeIn 2s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      max-width: 700px;
+      margin-bottom: 40px;
+    }
+
+    .cta-button {
+      padding: 12px 40px;
+      background-color: #3498db;
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #2980b9;
+    }
+
+    /* Parallax Section */
+    .parallax {
+      background-image: url('./kb.jpg');
+      height: 400px;
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Features Section */
+    .features {
+      display: flex;
+      justify-content: space-around;
+      padding: 80px 20px;
+      background: #ecf0f1;
+    }
+
+    .feature-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      width: 30%;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .feature-card h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .feature-card p {
+      font-size: 1.2rem;
+      color: #7f8c8d;
+    }
+
+    /* Testimonials Section */
+    .testimonials {
+      display: flex;
+      justify-content: space-around;
+      padding: 80px 20px;
+      background: #ecf0f1;
+    }
+
+    .testimonial-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      width: 30%;
+      text-align: center;
+    }
+
+    .testimonial-card p {
+      font-style: italic;
+      color: #7f8c8d;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-card h4 {
+      font-size: 1.2rem;
+      color: #2c3e50;
+    }
+
+    /* Pricing Section */
+    .pricing {
+      display: flex;
+      justify-content: space-around;
+      padding: 80px 20px;
+      background: #f4f4f4;
+    }
+
+    .pricing-plan {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      width: 30%;
+      text-align: center;
+    }
+
+    .pricing-plan h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .pricing-plan p {
+      font-size: 1.2rem;
+      color: #7f8c8d;
+      margin-bottom: 20px;
+    }
+
+    .pricing-plan .price {
+      font-size: 2.5rem;
+      color: #3498db;
+      margin-bottom: 30px;
+    }
+
+    .pricing-plan .cta-button {
+      background-color: #3498db;
+      padding: 12px 40px;
+      text-decoration: none;
+      color: white;
+      font-size: 1.1rem;
+      border-radius: 5px;
+    }
+
+    .pricing-plan .cta-button:hover {
+      background-color: #2980b9;
+    }
+
+    /* FAQ Section */
+    .faq {
+      background: #ecf0f1;
+      padding: 80px 20px;
+    }
+    
+    .faq h2 {
+        text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+    }
+
+    .faq-item h4 {
+      font-size: 1.5rem;
+      color: #2c3e50;
+    }
+
+    .faq-item p {
+      color: #7f8c8d;
+    }
+
+    /* Footer */
+    footer {
+      background: #2c3e50;
+      color: white;
+      /* text-align: center; */
+      padding: 20px;
+    }
+
+    footer p {
+      font-size: 1rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Bosh Sahifa</a></li>
+        <li><a href="#features">Kitoblar</a></li>
+        <li><a href="#testimonials">Fikrlar</a></li>
+        <li><a href="#pricing">Narxlar</a></li>
+        <li><a href="#faq">Savollar</a></li>
+        <li><a href="./add-book.html">Qo'shish</a></li>
+        <li><a href="./kontakt.html">Aloqa</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div>
+      <h1>Shaxsiy Kutubxonaning Yangi Dasturi</h1>
+      <p>Kitoblaringizni boshqaring, o'qish tarixingizni saqlang, va yanada ko'proq imkoniyatlar kashf eting!</p>
+      <a href="./books.html" class="cta-button">Kitoblar</a>
+    </div>
+  </section>
+
+  <!-- Parallax Section -->
+  <section class="parallax">
+    <p>Raqamli Kutubxonangizni Oson Boshqaring</p>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="feature-card">
+      <h3>Qidiruv Imkoniyatlari</h3>
+      <p>Kitoblarni nomi yoki muallifi bo'yicha tez va oson toping.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Statistika</h3>
+      <p>O'qigan kitoblaringiz va vaqt o'tkazish statistikalari bilan tanishing.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Qulay Interfeys</h3>
+      <p>Foydalanuvchi uchun sodda va intuitiv interfeys, har qanday qurilmada ishlash imkoniyati.</p>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials" id="testimonials">
+    <div class="testimonial-card">
+      <p>"Bu tizim men uchun juda qulay va foydali bo'ldi!"</p>
+      <h4>Ali, Foydalanuvchi</h4>
+    </div>
+    <div class="testimonial-card">
+      <p>"Kutubxonamni boshqarish juda oson va samarali." </p>
+      <h4>Salima, Foydalanuvchi</h4>
+    </div>
+    <div class="testimonial-card">
+      <p>"Ajoyib tizim! Kitoblarimni tezda topishga yordam beradi."</p>
+      <h4>Bekzod, Foydalanuvchi</h4>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing" id="pricing">
+    <div class="pricing-plan">
+      <h3>Standart</h3>
+      <p>Asosiy xususiyatlar bilan</p>
+      <div class="price">$9.99/oy</div>
+      <a href="#" class="cta-button">Sotib olish</a>
+    </div>
+    <div class="pricing-plan">
+      <h3>Premium</h3>
+      <p>Barcha xususiyatlar bilan</p>
+      <div class="price">$19.99/oy</div>
+      <a href="#" class="cta-button">Sotib olish</a>
+    </div>
+    <div class="pricing-plan">
+      <h3>Business</h3>
+      <p>Biznes uchun eng yaxshi tanlov</p>
+      <div class="price">$29.99/oy</div>
+      <a href="#" class="cta-button">Sotib olish</a>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq" id="faq">
+    <h2>Tez-tez So'raladigan Savollar</h2>
+    <div class="faq-item">
+      <h4>Q: Tizim qanday ishlaydi?</h4>
+      <p>A: Tizim kitoblaringizni saqlash va tartibga solishga yordam beradi. Har bir foydalanuvchi o'z kutubxonasiga ega bo'ladi.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Q: Narxlar qanday?</h4>
+      <p>A: Bizda 3 xil narxlar mavjud: Standart, Premium, va Business.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>&copy; 2024 Shaxsiy Kutubxona Tizimi. Barcha huquqlar himoyalangan.</p>
+  </footer>
+
+</body>
+</html>

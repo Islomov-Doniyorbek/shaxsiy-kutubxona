@@ -1,0 +1,134 @@
+/* Barcha elementlarni normalizatsiya qilish */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    line-height: 1.6;
+  }
+  
+  /* HEADER QISM */
+  .hero-section {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .hero-content h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background: #fff;
+    color: #ff7e5f;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* ABOUT SECTION */
+  .about-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .feature {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 300px;
+  }
+  
+  /* BOOKS SECTION */
+  .books-section {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .books-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .book-card {
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  /* ADD BOOK SECTION */
+  .add-book-section {
+    background: #ff7e5f;
+    padding: 50px 20px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .add-book-section input {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .add-book-section .btn {
+    cursor: pointer;
+    background: #fff;
+    color: #ff7e5f;
+  }
+  
+  /* FOOTER */
+  footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+  }
+  
